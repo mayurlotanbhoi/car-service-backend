@@ -5,7 +5,12 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
+app.use(
+  cors({
+    origin: ["https://car-service-foi1.onrender.com/", "http://localhost:3000"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 
 const cretUser = require("./apis/user_apis/user_router");
