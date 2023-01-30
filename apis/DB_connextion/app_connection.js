@@ -5,7 +5,7 @@ const pool = createPool({
   database: "sql12594367",
   port: 3306,
   password: "ngnAVJmn9p",
-  user: " sql12594367",
+  user: "sql12594367",
 });
 
 module.exports = pool;

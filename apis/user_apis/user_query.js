@@ -4,6 +4,7 @@ const { compare } = require("bcrypt");
 module.exports = {
   // *****************user Registar start***************
   create: (data, callback) => {
+    console.log(data);
     pool.query(
       "insert into user_info( Email  , passWord, Address , Strit , PinCode , city ,state) value(?,?,?,?,?,?,?)",
       [

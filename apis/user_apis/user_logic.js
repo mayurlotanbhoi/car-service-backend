@@ -11,7 +11,7 @@ module.exports = {
     body.passWord = await hash(body.passWord, 8);
     create(body, (err, result) => {
       if (err) {
-        // console.log(err);
+        console.log(err);
         res.status(500).json({
           succes: "fail",
           masseg: "User Alredy Present",
