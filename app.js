@@ -9,6 +9,10 @@ app.use(
   cors({
     origin: ["https://car-service-foi1.onrender.com", "http://localhost:3000"],
     credentials: true,
+    methods: ["GET", "PUT", "POST", "DELETE", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization", "x-csrf-token"],
+    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    exposedHeaders: ["*", "Authorization"],
   })
 );
 app.use(cookieParser());
