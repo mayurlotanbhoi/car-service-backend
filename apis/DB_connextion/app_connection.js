@@ -1,11 +1,11 @@
 const { createPool } = require("mysql2");
 
 const pool = createPool({
-  host: "localhost",
-  database: "car_Service_App",
+  host: "sql12.freemysqlhosting.net",
+  database: "sql12594367",
   port: 3306,
-  password: "Golubhoi200@",
-  user: "root",
+  password: "ngnAVJmn9p",
+  user: " sql12594367",
 });
 
 module.exports = pool;
