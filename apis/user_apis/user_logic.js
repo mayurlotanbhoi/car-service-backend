@@ -43,7 +43,7 @@ module.exports = {
           massege: err,
         });
       } else {
-        const jwtoken = jwt.sign(result, process.env.JWTkEY, {
+        const jwtoken = jwt.sign({ result: result }, process.env.JWTkEY, {
           expiresIn: "30d",
         });
         res
