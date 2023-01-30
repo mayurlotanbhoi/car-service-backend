@@ -7,7 +7,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://car-service-foi1.onrender.com/", "http://localhost:3000"],
+    origin: ["https://car-service-foi1.onrender.com", "http://localhost:3000"],
     credentials: true,
   })
 );
