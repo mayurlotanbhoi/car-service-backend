@@ -4,7 +4,11 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const app = express();
 const PORT = process.env.PORT;
+
+app.use(cookieParser());
+app.use(express.json({ limit: "50mb" }));
 app.use(express.json());
+
 app.use(
   cors({
     origin: ["https://car-service-foi1.onrender.com", "http://localhost:3000"],
@@ -15,7 +19,6 @@ app.use(
     exposedHeaders: ["*", "Authorization"],
   })
 );
-app.use(cookieParser());
 
 const cretUser = require("./apis/user_apis/user_router");
 const userlogin = require("./apis/user_apis/user_router");
