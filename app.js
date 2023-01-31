@@ -6,8 +6,6 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cookieParser());
-app.use(express.json({ limit: "50mb" }));
-app.use(express.json());
 
 app.use(
   cors({
@@ -19,6 +17,9 @@ app.use(
     exposedHeaders: ["*", "Authorization"],
   })
 );
+
+app.use(express.json({ limit: "50mb" }));
+app.use(express.json());
 
 const cretUser = require("./apis/user_apis/user_router");
 const userlogin = require("./apis/user_apis/user_router");
